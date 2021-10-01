@@ -1,0 +1,66 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+
+    @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+    }
+    }
+    @import "_reset";
+    //!!...........ПЕРЕМЕННЫЕ.....................!!\\
+    
+    $mainColor: rgb(74, 84, 84);
+    $secondColor: white;
+    $blackshadow: rgb(0, 0, 0, 0.75);
+    // $bronze: rgb(178, 98, 45);
+    $bronze: rgb(175, 137, 92);
+    $headerColor: #212424;
+
+    $mainFontSize: 1.4rem;
+    $secondFontSize: 1.8rem;
+    $sidewidth: 30rem;
+
+    $mainFF: "Jura";
+    $secondFF: "Forum";
+    
+
+    //!...........................................!!\\
+html{
+    font-size: 10px;
+}
+body{
+    font-family: $mainFF;
+    font-weight: 400;
+    font-size: $mainFontSize;
+    color: $secondColor;
+}
+
+body.lock{
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+.container {
+    max-width: 80rem;
+    padding: 0 5rem;
+    margin: 0 auto;
+
+}
+.main {
+    flex: 1 1 auto;
+
+}
+@import "_fonts";
+@import "_header";
+@import "_sidebar";
+@import "_btn";
+@import "_main";
+@import "_footer";
