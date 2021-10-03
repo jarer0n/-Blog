@@ -210,7 +210,7 @@ body.lock {
   display: inline-block;
   overflow: hidden;
   text-transform: uppercase;
-  padding: 1.35rem 1.5rem;
+  padding: 1.3rem 1.5rem;
   font-weight: 600;
   -webkit-transition: all 0.2s ease-in-out 0s;
   -o-transition: all 0.2s ease-in-out 0s;
@@ -222,32 +222,6 @@ body.lock {
 .header_links span {
   position: relative;
   z-index: 3;
-}
-
-.header_links::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 45%;
-  height: 100%;
-  background-color: rgba(74, 84, 84, 0.5);
-  -webkit-transform: skewX(-25deg) scale(0);
-      -ms-transform: skewX(-25deg) scale(0);
-          transform: skewX(-25deg) scale(0);
-  -webkit-transition: all 0.2s ease-in-out 0s;
-  -o-transition: all 0.2s ease-in-out 0s;
-  transition: all 0.2s ease-in-out 0s;
-}
-
-.header_links:hover::before {
-  -webkit-transform: scale(1.5) skewX(-25deg);
-      -ms-transform: scale(1.5) skewX(-25deg);
-          transform: scale(1.5) skewX(-25deg);
-}
-
-.header_links:hover {
-  background-color: #af895c;
 }
 
 .header_links.arrow {
@@ -266,6 +240,9 @@ body.lock {
   -webkit-transform: translateY(40%);
       -ms-transform: translateY(40%);
           transform: translateY(40%);
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
 .header_left {
@@ -282,6 +259,56 @@ body.lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.header_left-item {
+  position: relative;
+  height: 100%;
+}
+
+.header_left-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 0.3rem;
+  background: -webkit-gradient(linear, right top, left top, from(white), to(#4a5454));
+  background: -o-linear-gradient(right, white, #4a5454 100%);
+  background: linear-gradient(270deg, white, #4a5454 100%);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.header_left-item:hover::after {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.header_left-item:hover .header_links.arrow::after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.header_left-item:hover .header_links {
+  background-color: #af895c;
+}
+
+.header_left-item:hover > .header_left-submenu {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0) scale(1);
+      -ms-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
 }
 
 .header_right {
@@ -310,6 +337,13 @@ body.lock {
   padding: 0.5rem 1rem;
   background-color: rgba(175, 137, 92, 0.6);
   color: white;
+  position: relative;
+}
+
+.header_right-search:focus::after {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .header_right-search::-webkit-input-placeholder {
@@ -330,6 +364,49 @@ body.lock {
 
 .header_right-search::placeholder {
   color: white;
+}
+
+.header_right-search:focus {
+  background-color: #af895c;
+}
+
+.header_left-submenu {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  top: 95%;
+  left: 0;
+  -webkit-transform: translateY(-10px) scale(0);
+      -ms-transform: translateY(-10px) scale(0);
+          transform: translateY(-10px) scale(0);
+  -webkit-transform-origin: left top;
+      -ms-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out 0s;
+  transition: -webkit-transform 0.3s ease-in-out 0s;
+  -o-transition: transform 0.3s ease-in-out 0s;
+  transition: transform 0.3s ease-in-out 0s;
+  transition: transform 0.3s ease-in-out 0s, -webkit-transform 0.3s ease-in-out 0s;
+  background-color: #af895c;
+  padding-bottom: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.75);
+          box-shadow: 0 3px 12px rgba(0, 0, 0, 0.75);
+}
+
+.header_left-submenu-link {
+  position: relative;
+  display: block;
+  color: white;
+  font-weight: 500;
+  padding: 1rem;
+  min-width: 18rem;
+  text-shadow: 0px 5px 8px rgba(0, 0, 0, 0.75);
+}
+
+.header_left-submenu-link:hover {
+  background-color: #9b774c;
 }
 
 .sidebar {
