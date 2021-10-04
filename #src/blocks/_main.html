@@ -1,3 +1,67 @@
 <main class="main">
-    <div class="container">main</div>
+    <div class="container">
+        <div class="stories">
+            <div class="stories_item">
+                <img class="stories_item-object" src="img/stories1.jpg" alt="">
+                <div class="stories_item-title">Практикую JS</div>
+                <time datetime="2021-10-01 10:10" class="stories_item-date">01.10.2021</time>
+            </div>
+            <div class="stories_item">
+                <img class="stories_item-object" src="img/stories2.jpg" alt="">
+                <div class="stories_item-title">Отдыхаю на природе</div>
+                <time datetime="2021-10-01 10:10" class="stories_item-date">01.10.2021</time>
+            </div>
+            <div class="stories_item">
+                <img class="stories_item-object" src="img/stories3.jpg" alt="">
+                <div class="stories_item-title">Купил новый монитор</div>
+                <time datetime="2021-10-01 10:10" class="stories_item-date">01.10.2021</time>
+            </div>
+            <div class="stories_item">
+                <img class="stories_item-object" src="img/stories4.jpg" alt="">
+                <div class="stories_item-title">Закрываю роллер-сезон</div>
+                <time datetime="2021-10-01 10:10" class="stories_item-date">01.10.2021</time>
+            </div>
+            
+
+        </div>
+        <div class="addpost">
+            <form class="addpost_form" action="/" method="post">
+                <textarea class="addpost_form-textarea" name="post-text" placeholder="Напишите что-нибудь"></textarea>
+                <div class="addpost_form-actions">
+                    <label class="addpost_form-file" for="addpost-file">
+                        <input type="file" id="addpost-file">
+                    </label>
+                    <button class="addpost_form-add" type="submit"><img src="img/addpostADD.svg" alt=""></button>
+                </div>
+            </form>
+        </div>
+        <div class="post">
+            <div class="post_content">
+                <p class="post_content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum volutpat orci turpis urna. Et vestibulum, posuere tortor lacinia sit. Sagittis porttitor orci auctor in at tincidunt arcu egestas. Fusce arcu sodales lacinia eu auctor nunc nam id. Diam sit sed volutpat massa. Egestas ornare vel volutpat.</p>
+            </div>
+            <div class="post_footer">
+                <ul class="post_footer-list">
+                    <li><time datetime="2021-10-02 18:27">02.10.2021</time></li>
+                </ul>
+            </div>
+        </div>
+        <article class="post">
+            <div class="post_header">
+                <a href="#"><img src="img/post1.jpg" alt="Как писать код быстро и безболезненно?"></a>
+            </div>
+            <div class="post_content">
+                <a href="#">
+                    <h2>Как писать код быстро и безболезненно?</h2>
+                </a>
+                <p class="post_content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum volutpat orci turpis urna. Et vestibulum, posuere tortor lacinia sit. Sagittis porttitor orci auctor in at tincidunt arcu egestas. Fusce arcu sodales lacinia eu auctor nunc nam id. Diam sit sed volutpat massa. Egestas ornare vel volutpat.</p>
+            </div>
+            <div class="post_footer">
+                <ul class="post_footer-list">
+                    <li class="post_footer-item"><time datetime="2021-10-02 18:27">02.10.2021</time></li>
+                    <li class="post_footer-item"><a href="#">Cоздание сайтов</a></li>
+                </ul>
+                <a href="" class="post_footer-read">Читать</a>
+            </div>
+        </article>
+    </div>
 </main>

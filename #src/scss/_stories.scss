@@ -1,0 +1,60 @@
+.stories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1.3rem ;
+    grid-template-rows: 19.5rem;
+    margin-bottom: 3rem;
+
+    &_item {
+        background-color: $bronze;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0.5rem 0.5rem 0.87rem rgba($color: $blackshadow, $alpha: .5);
+        border-radius: 0.5rem;
+        cursor: pointer;
+        &::after{
+            content: "";
+            position: absolute;
+            z-index: 2;
+            display: block;
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(180deg, rgba($blackshadow, 0.8),rgba($blackshadow, 0)50%, rgba($blackshadow, 0.8));
+        }
+        &:hover{
+            .stories_item-object{
+                transform: scale(2);
+                transition-duration: 3s;
+            }
+        }
+        
+    }
+    &_item-object{
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 1s ease 0s;
+    }
+
+	&_item-title,&_item-date {
+        position: absolute;
+        font-size: 1.3rem;
+        color: $secondColor;
+        z-index: 3;
+        padding: 1.5rem;
+
+	}
+
+    &_item-date{
+        bottom: 0;
+        right: 0;
+    }
+	
+
+}
+

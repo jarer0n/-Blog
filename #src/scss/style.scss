@@ -11,12 +11,12 @@
     @import "_reset";
     //!!...........ПЕРЕМЕННЫЕ.....................!!\\
     
-    $mainColor: rgb(74, 84, 84);
-    $secondColor: white;
+    $mainColor: #1C1C1C;
+    $secondColor: #D2D2D2;
     $blackshadow: rgb(0, 0, 0, 0.75);
-    // $bronze: rgb(178, 98, 45);
     $bronze: rgb(175, 137, 92);
     $headerColor: #212424;
+    $yellow: #f9de87;
 
     $mainFontSize: 1.4rem;
     $secondFontSize: 1.8rem;
@@ -65,4 +65,7 @@ body.lock{
 @import "_sidebar";
 @import "_btn";
 @import "_main";
+@import "_stories";
+@import "_addpost";
+@import "_post";
 @import "_footer";

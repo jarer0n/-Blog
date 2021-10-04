@@ -1,0 +1,64 @@
+.addpost {
+    padding: 1.5rem 2rem;
+    background-color: rgba($color: $bronze, $alpha: .5);
+    box-shadow: 0.5rem 0.5rem 0.87rem rgba($color: $blackshadow, $alpha: .5);
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+
+    &_form {
+        display: block;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+
+    &_form-textarea {
+        width: 75%;
+        height: 2.5rem;
+        resize: none;
+        color: $secondColor;
+        background-color: transparent;
+        font-size: 1.5rem;
+        &:focus{
+        }
+        &::placeholder{
+            font-size: 1.5rem;
+            color: $secondColor;
+        }
+    }
+    &_form-actions{
+        width: 25%;
+        display: flex;
+        justify-content: flex-end;
+
+    }
+    &_form-file{
+        display: block;
+        cursor: pointer;
+        width: 4.4rem;
+        height: 4.4rem;
+        border-radius: 50%;
+        background: #EBEBEB url(../img/addpost.svg) center no-repeat;
+        transition: all 0.2s ease;
+        &:hover{
+            background-color: darken($color: #EBEBEB, $amount: 7%);
+        }
+        input{
+            display: none;
+        }
+    }
+    &_form-add{
+        display: block;
+        width: 4.4rem;
+        height: 4.4rem;
+        border-radius: 50%;
+        background-color: $bronze;
+        color: $secondColor;
+        margin-left: 1.5rem;
+        transition: all 0.2s ease;
+        &:hover{
+            background-color: darken($color: $bronze, $amount: 7%);
+        }
+    }
+}
